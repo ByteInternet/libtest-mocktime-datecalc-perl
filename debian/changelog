@@ -1,0 +1,5 @@
+libtest-mocktime-datecalc-perl (5+ds-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #608825)
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Tue, 04 Jan 2011 20:29:01 +0000

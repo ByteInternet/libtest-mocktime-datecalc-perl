@@ -1,0 +1,36 @@
+Source: libtest-mocktime-datecalc-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7.0.50~)
+Build-Depends-Indep: perl, libdate-calc-perl, libtest-mocktime-perl,
+ libsub-identify-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Nicholas Bamber <nicholas@periapt.co.uk>
+Standards-Version: 3.9.1
+Homepage: http://search.cpan.org/dist/Test-MockTime-DateCalc/
+Vcs-Svn: svn://svn.debian.org/pkg-perl/trunk/libtest-mocktime-datecalc-perl/
+Vcs-Browser: http://svn.debian.org/viewsvn/pkg-perl/trunk/libtest-mocktime-datecalc-perl/
+
+Package: libtest-mocktime-datecalc-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}, libdate-calc-perl
+Recommends: libtest-mocktime-perl
+Suggests: libsub-identify-perl, libtime-fake-perl, libtime-warp-perl
+Description: testing utility to fake time for Date::Calc
+ Test::MockTime::DateCalc arranges for the functions in Date::Calc to
+ follow the Perl level 'time' function, and in particular any fake date/time
+ set there by Test::MockTime.  The following Date::Calc functions are changed
+ .
+  System_Clock
+  Today
+  Now
+  Today_and_Now
+  This_Year
+  Gmtime
+  Localtime
+  Timezone
+  Time_to_Date
+ .
+ Gmtime, Localtime, Timezone and Time_to_Date are made to default
+ to the Perl-level current time.  When called with an explicit time
+ argument they're unchanged.

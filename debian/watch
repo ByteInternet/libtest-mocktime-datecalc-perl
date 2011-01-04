@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/\+ds// \
+http://search.cpan.org/dist/Test-MockTime-DateCalc/   .*/Test-MockTime-DateCalc-v?(\d[\d.-]*)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$ debian debian/repack.stub

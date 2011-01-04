@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+PACKAGE=libtest-mocktime-datecalc-perl
+#$(shell dh_listapckages)
+TMP=$(CURDIR)/debian/$(PACKAGE)
+
+%:
+	dh $@
+
+override_dh_installexamples:
+	dh_installexamples
+	chmod 755 $(TMP)/usr/share/doc/$(PACKAGE)/examples/*.pl
+
+
